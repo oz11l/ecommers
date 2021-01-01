@@ -76,4 +76,63 @@ $(window).on('load', function () {
       $('#total-price-for-all-products').text(totalPriceForAllProducts + '$');
     }
     
+    
+    var citysByCountry = {
+      sa: ['جدة','الرياض'],
+      eg: ['القاهرة','الاسكندرية'],
+      qa: ['الوكرة','الدوحة'],
+      jo: ['عمان','الزرقاء'],
+      sy: ['دمشق','حلب','حماة']
+    };
+
+    //عندما يتغير البلد 
+    $('#form-checkout select[name="contry"]').change(function() {
+
+      //اجلب رمز البلد
+      var country = $(this).val();
+
+      //اجلب مدن هذا البلد من المتغير
+      var cities = citysByCountry[country];
+
+      //فرغ قائمة المدن
+      $('#form-checkout select[name="city"]').empty();
+
+      //اضافة خيار اختر مدينة
+      $('#form-checkout select[name="city"]').append(
+       '<option disabled selected value=""> اختر المدينة</option>'
+      );
+
+      //اضف المدن الى قائمة المدن
+      cities.forEach(function(city){
+        var newOption = $('<option></option>');
+        newOption.text(city);
+        newOption.val(city);
+        $('#form-checkout select[name="city"]').append(newOption);
+      });
+          
+    });
+
+
+    //عندما تتغير طريقة الدفع
+    $('#form-checkout input[name="payment_method"]').change(function() {
+
+      //اجلب القيمة المختارة حاليا
+      var paymentMethod = $(this).val();
+
+      if(paymentMethod === 'on_delivary'){
+        
+        //اذا كانت عند الاستلام فعطل حقول الاستلام بالبطاقة
+        $('#credit-card-info input').prop('disabled',true);
+
+      } else{
+
+        //وإلا ففعلها
+        $('#credit-card-info input').prop('disabled',false);
+
+      }
+
+      //بدل معلومات البطاقة بين الظهور و الاختفاء
+      $('#credit-card-info').toggle();
+    });
+
   });

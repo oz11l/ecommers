@@ -19,7 +19,7 @@
                     <a class="navbar-toggler btn btn-icon" href="checkout.html">
                         <i class="fas fa-shopping-cart fa-lg"></i>
                     </a>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href=".">
                         <img src="./images/logo.png" alt="موقع عربي">
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                 </form>
                 <div class="collapse navbar-collapse" id="navbar-collapsed-menu">    
                     <ul class="navbar-nav mr-auto">
-                        <li class="active nav-item"><a class=" nav-link"href="#">الصفح الرئيسية</a></li>
+                        <li class=" nav-item"><a class=" nav-link"href=".">الصفح الرئيسية</a></li>
                         <li class="dropdown nav-item">
                             <a class="dropdown-toggle nav-link" data-toggle="dropdown" id="navBarDropdownn"  role="button" href="#" aria-expanded="false">اقسام المتجر</a>
                             <ul class="dropdown-menu">
@@ -105,8 +105,9 @@
 
 
     <!--قسم عربة الشراء-->
+    <div class="row">
     <h1 class="custom-heading">عربة الشراء</h1>
-    <form id="form-checkout">
+    <form id="form-checkout" action="payment.html" method="GET">
         <table class="custom-table">
             <thead>
                 <tr>
@@ -114,7 +115,6 @@
                     <th>السعر المطلوب</th>
                     <th> العدد المطلوب</th>
                     <th class="d-none d-md-block">السعر الاجمالي</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -130,8 +130,11 @@
                             </div>
                         </div>
                     </td>
+
                     <td>400$</td>
+
                     <td>
+                        <input type="hidden" name="product1" value="تي شيرت رجالي من لاكوست">
                         <select name="quantity2" class="form-control custom-form-control quantity" data-product-quantity>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -139,17 +142,21 @@
                             <option value="4">4</option>
                         </select>
                     </td>
-                    <td class="total-price-for-product d-none d-md-block">
+
+                    <td class="total-price-for-product">
                         1200$
                     </td>
+
                     <td>
                         <button class="btn btn-danger custom-btn custom-btn-danger" data-remove-from-cart>
                             <span class="d-none d-md-block">حذف</span>
                             <i class="fas fa-trash-alt  d-md-none d-block" ></i>
                         </button>
                     </td>
+
                 </tr>
                 <tr data-product-info data-product-price="300">
+
                     <td>
                         <div class="media custom-media">
                             <img src="./images/tshirt.jpg" alt="تي شيرت اديداس" class="d-none d-md-block">
@@ -161,8 +168,11 @@
                             </div>
                         </div>
                     </td>
+
                     <td>300$</td>
+
                     <td>
+                        <input type="hidden" name="product2" value="تي شيرت اديداس">
                         <select name="quantity1" class="form-control custom-form-control quantity" data-product-quantity>
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
@@ -170,15 +180,18 @@
                             <option value="4">4</option>
                         </select>
                     </td>
-                    <td class="total-price-for-product d-none d-md-block">
+
+                    <td class="total-price-for-product ">
                         300$
                     </td>
+
                     <td>
                         <button class="btn btn-danger custom-btn custom-btn-danger" data-remove-from-cart>
                             <span class="d-none d-md-block">حذف</span>
                             <i class="fas fa-trash-alt  d-md-none d-block" ></i>
                         </button>
                     </td>
+
                 </tr>
             </tbody>
             <tfoot>
@@ -191,13 +204,14 @@
                 </tr>
             </tfoot>
         </table>
-        <button class="btn custom-btn-primary2 custom-btn-with-icon">
+        <button class="btn custom-btn-primary2 custom-btn-with-icon" type="submit">
              <span>
                  إكمال عملية الشراء
                  <i class="fas fa-dollar-sign"></i>
              </span>
         </button>
     </form>
+    </div>
      <!-- نهاية قسم عربة الشراء-->
 
      <!--اقترحنا لك-->

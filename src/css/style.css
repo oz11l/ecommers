@@ -838,10 +838,38 @@ border-bottom: 1px solid #dfdfdf;
 
 
 
+/*******************************************************
+*************************************
+***********payment-page*********************************
+***********************************
+********************************************************/
+.custom-input-detals{
+    border-width: 2px;
+    border-radius: 3px;
+    height: 46px !important;
+    padding: 0px 6px;
+    font-size:18px;
+    width: 97%;
+}
+
+.custom-input-detals[email]{
+    direction: rtl !important;
+}
+
+.custom-form-control:focus{
+  border-color: #b86d07;
+  box-shadow: 0px 1px #b86d07;
+}
 
 
+#credit-card-info{
+    margin-right: 3%;
+}
 
-
+input[type="number"]{
+    direction: rtl;
+    text-align: right;
+}
 
 
 
@@ -1341,6 +1369,12 @@ border-bottom: 1px solid #dfdfdf;
         height: 100%;
     } 
 
+
+    /**checkout page**/
+    .total-price-for-product{
+        display: none;
+    }
+
  }
 
 
@@ -1370,4 +1404,9 @@ border-bottom: 1px solid #dfdfdf;
     .suggition .custom-thumbnail img{
         height: 100%;
     } 
+
+        /**checkout page**/
+        .total-price-for-product{
+            display: none;
+        }
  }
