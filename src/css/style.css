@@ -871,8 +871,96 @@ input[type="number"]{
     text-align: right;
 }
 
+/*******************************************************
+*************************************
+***********search-page*********************************
+***********************************
+********************************************************/
+
+#form-advanced-search{
+    border: 1px solid #ebebeb;
+    padding-bottom: 30px;
+    display: table;
+}
+
+#form-advanced-search .custom-panel{
+    border: none;
+    padding: 5px;
+}
 
 
+.custom-panel .card-header{
+    background-color: transparent ;
+    padding: 7px 10px 13px;
+    margin-bottom: 15px;
+    
+}
+
+.custom-list-group>.list-group-item{
+border: none;
+padding: 0px 10px 14px 0px;
+}
+
+.custom-list-group>.list-group-item:last-child{
+    padding: 0 10px 0 0 ;
+}
+
+#form-advanced-search label {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ui-slider{
+    margin: 20px 0 15px !important;
+    height: 2px !important;
+}
+
+.ui-slider .ui-state-default {
+    background-color: #f8ad47!important;
+    border: none!important;
+    border-radius: 50%!important;
+    height: 12px!important;
+    width: 12px!important;
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+    top: -6px !important;
+}
+
+.ui-slider .ui-slider-range{
+    border: 1px solid #f8ad47 !important;
+}
+
+.custom-pagination{
+    margin: 25px 0;
+}
+
+.custom-pagination li a {
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid #ebebeb;
+    color: #c2c2c2;
+    transition: all 0.3s ease;
+}
+
+.custom-pagination li.active a{
+    background-color: #f8ad47 !important;
+    color: #fff !important;
+    border-color: #f8ad47 !important;
+}
+
+.custom-pagination li a:active,
+.custom-pagination li a:focus,
+.custom-pagination li a:hover{
+    color: #ab7731 !important;
+    border-color: #ab7731;
+    background-color: transparent;
+} 
+
+#search-results .custom-thumbnail{
+    margin-left: -8px;
+    margin-right: -8px;
+}
 
 
 
@@ -1317,6 +1405,13 @@ input[type="number"]{
         line-height: 40px;
         font-size: 20px;
     }
+
+    .ui-slider .ui-state-default {
+        height: 20px!important;
+        width: 20px!important;
+        top: -10px !important;
+    }
+    
 }
 
 
